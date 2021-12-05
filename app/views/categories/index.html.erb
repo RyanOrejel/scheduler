@@ -1,0 +1,25 @@
+<style>
+  .sc {
+    padding: 80px;
+    background: #EFF6FD;
+  }
+  </style>
+
+  <div class="sc">
+
+  <div class="row gy-5" align="left";>
+    <div class="col-12">
+      <h4>Categorías:</h4>
+      <div class="p-3 border bg-light">
+        <% @categories.each do |category| %>
+          <p>
+            <%= link_to category.name, category %>
+          </p>
+        <% end %></div>
+    </div>
+  </div>
+
+<ol>
+  <br> <%= link_to "Agregar nueva categoría", new_category_path %> </br>
+</ol>
+</div>

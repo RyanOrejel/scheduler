@@ -1,0 +1,59 @@
+<style media="screen">
+  .sc {
+    padding: 50px;
+    background: #EFF6FD;
+  }
+</style>
+
+<div align="left"><div align="center" class="sc"><h4>--- Día <%= @calendar.day %> de Diciembre 2021 ---</h4> <img src="https://cdn-icons-png.flaticon.com/512/42/42288.png" width="30" height="30"></div>
+<!--<li><%= link_to "Edit", edit_calendar_path(@calendar) %></li>-->
+
+<div class="sc ">
+<div class="row gy-5">
+  <div class="col-12">
+    <h4>Notas:</h4>
+    <div class="p-3 border bg-light"> <%= render @calendar.notes %> </div>
+  </div>
+</div>
+
+<p></p>
+
+  <div class="row gy-5">
+    <div class="col-12">
+      <h4>Tareas:</h4>
+      <div class="p-3 border bg-light"><%= render @calendar.tasks %></div>
+    </div>
+  </div>
+
+<p></p>
+
+<div class="row gy-5">
+  <div class="col-12">
+    <h4>Participantes:</h4>
+    <div class="p-3 border bg-light"><%= render @calendar.participants %></div>
+  </div>
+</div>
+
+<br></br>
+<div align="center"><h4>--- Agregar Eventos ---</h4> <img src="https://cdn-icons-png.flaticon.com/512/45/45533.png" width="40" height="40"></div>
+<br></br>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h4>Agregar una tarea:</h4>
+      <p></p>
+      <%= render 'tasks/form' %>
+    </div>
+    <div class="col">
+      <h4>Agregar un participante:</h4>
+      <p></p>
+      <%= render 'participants/form' %>
+    </div>
+    <div class="col col-lg-3">
+      <h4>Agregar una nota:</h4>
+      <p></p>
+      <%= render 'notes/form' %> </div>
+    </div>
+  </div>
+</div>

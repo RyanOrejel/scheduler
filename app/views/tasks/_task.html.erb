@@ -1,0 +1,21 @@
+<p>
+  <strong>Nombre:</strong>
+  <%= task.name %>
+</p>
+
+<p>
+  <strong>Descripción:</strong>
+  <%= task.description %>
+</p>
+
+<p>
+  <strong>Fecha de evento:</strong>
+  <%= task.due_date %>
+</p>
+
+<p>
+  <strong>Categoria:</strong>
+  <%= task.category %>
+</p>
+
+<p> <%= button_to 'Eliminar tarea', [task.calendar, task], method: :delete, data: { confirm: "¿Estás seguro?" } %> </p>

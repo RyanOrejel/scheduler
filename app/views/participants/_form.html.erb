@@ -1,0 +1,9 @@
+<%= form_with model: [ @calendar, @calendar.participants.build ] do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <input class="btn btn-outline-dark" <%= form.submit %>
+  </p>
+<% end %>

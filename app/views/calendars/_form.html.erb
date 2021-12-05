@@ -1,0 +1,13 @@
+<%= form_with model: @calendar do |form| %>
+  <div>
+    <%= form.label :day %><br>
+    <%= form.text_field :day %>
+    <% @calendar.errors.full_messages_for(:day).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

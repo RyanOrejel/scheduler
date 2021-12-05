@@ -1,0 +1,6 @@
+<p>
+  <strong>Descripción:</strong>
+  <%= note.description %>
+</p>
+
+<p> <%= button_to 'Eliminar nota', [note.calendar, note], method: :delete, data: { confirm: "¿Estás seguro?" } %> </p>

@@ -1,0 +1,21 @@
+<%= form_with model: [ @calendar, @calendar.tasks.build ] do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.label :description %><br>
+    <%= form.text_area :description %>
+  </p>
+  <p>
+    <%= form.label :due_date %><br>
+    <%= form.date_field :due_date %>
+  </p>
+  <p>
+    <%= form.label :category %><br>
+    <%= form.text_field :category %>
+  </p>
+  <p>
+    <input class="btn btn-outline-dark" <%= form.submit %>
+  </p>
+<% end %>

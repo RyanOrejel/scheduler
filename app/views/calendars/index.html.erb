@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {box-sizing: border-box;}
+ul {list-style-type: none;}
+
+.colorLink {
+  color: #BD5151;
+}
+
+.month {
+  padding: 33px 25px;
+  width: 100%;
+  background: #E3EFFA;
+  text-align: center;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: black;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 20px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 15px 0;
+  background-color: #6B97C1;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.days {
+  padding: 30px 0;
+  background: #EFF6FD;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size:12px;
+  color: #777;
+}
+
+.days li .active {
+  padding: 5px;
+  background: #1abc9c;
+  color: white
+}
+
+(max-width:720px) {
+  .weekdays li, .days li {width: 13.1%;}
+}
+
+(max-width: 420px) {
+  .weekdays li, .days li {width: 12.5%;}
+  .days li .active {padding: 2px;}
+}
+
+(max-width: 290px) {
+  .weekdays li, .days li {width: 12.2%;}
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+</style>
+</head>
+<body>
+
+<div class="month">
+  <ul>
+    <li>
+      Diciembre ---
+      <span style="font-size:20px">2021</span>
+    </li>
+  </ul>
+</div>
+
+<ul class="weekdays">
+  <li><b>-- Lunes --</b></li>
+  <li><b>-- Martes --</b></li>
+  <li><b>-- Miércoles --</b></li>
+  <li><b>-- Jueves --</b></li>
+  <li><b>-- Viernes --</b></li>
+  <li><b>-- Sábado --</b></li>
+  <li><b>-- Domingo --</b></li>
+</ul>
+
+<ul class="days">
+  <li><b>29</b></li>
+  <li><b>30</b></li>
+    <% @calendars.each do |calendar| %>
+        <li><%= link_to calendar.day, calendar, class: "colorLink", class: "btn btn-outline-dark" %></li>
+    <% end %>
+<li><b>01</b></li>
+<li><b>02</b></li>
+</ul>
+
+<!--<%= link_to "New Day", new_calendar_path %>-->
+
+</body>
+</html>

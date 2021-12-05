@@ -1,0 +1,6 @@
+<p>
+  <strong>Nombre:</strong>
+  <%= participant.name %>
+</p>
+
+<p> <%= button_to 'Eliminar participante', [participant.calendar, participant], method: :delete, data: { confirm: "¿Estás seguro?" }  %> </p>
